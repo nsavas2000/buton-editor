@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Little Prince</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/theme/dracula.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	<div class="banner">
+        <div class="col-10 logo">
+            <h2>Bobo Robot</h2>
+        </div>
+        
+        <div class="col-2">
+            <button class="banner-button" type="button" style="background-color: #DA498D;">
+                <i class="fa-solid fa-play fa-xl"></i>
+            </button>
+            <button class="banner-button" type="button" style="background-color: #FFD23F;">
+                <i class="fa-solid fa-reply fa-xl"></i>
+            </button>
+           
+        </div>
+	</div>
+    <div class="contentwrapper">
+        <div class="main-container">
+            <div class="code-section">
+                <div id="editor"></div>
+                <div class="lower-section">
+                    <button id="ledButton" class="action-button" onclick="toggleKeypad('ledKeypad', 'ledButton')" style="background-color: #DA498D;">
+                        <i class="fa-solid fa-lightbulb"></i> Far
+                    </button>
+                    <button id="buzzerButton" class="action-button" onclick="toggleKeypad('buzzerKeypad', 'buzzerButton')" style="background-color: #8174A0;">
+                        <i class="fa-solid fa-music"></i> Korna
+                    </button>
+                    <button id="driveButton" class="action-button" onclick="toggleKeypad('driveKeypad', 'driveButton')" style="background-color: #7F27FF;">
+                        <i class="fa-solid fa-car-side"></i> Sür
+                    </button>
+                    <button id="turnButton" class="action-button" onclick="toggleKeypad('turnKeypad', 'turnButton')" style="background-color: #FFB200;">
+                        <i class="fa-solid fa-rotate"></i> Yön
+                    </button>
+                    <button id="repeatButton" class="action-button" onclick="toggleKeypad('repeatKeypad', 'repeatButton')" style="background-color: #4CAF50;">
+                        <i class="fa-solid fa-repeat"></i> Tekrarla
+                    </button>
+                    <div id="ledKeypad" class="keypad"></div>
+                    <div id="buzzerKeypad" class="keypad"></div>
+                    <div id="driveKeypad" class="keypad"></div>
+                    <div id="turnKeypad" class="keypad"></div>
+                    <div id="repeatKeypad" class="keypad"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/javascript/javascript.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

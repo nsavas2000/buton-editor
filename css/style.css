@@ -1,0 +1,166 @@
+
+
+* {
+	box-sizing: border-box;
+}
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+.banner {
+    background-color: #2A3335;
+    color: white;
+    padding: 10px;
+    display: flex; /* Flexbox kullanarak elemanları hizala */
+    align-items: center; /* Dikey hizalama */
+    justify-content: flex-end; /* Butonları sağa yasla */
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+
+.logo{
+    cursor: pointer; /* İmleci el yap */
+}
+
+.banner-button {
+    padding: 8px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    margin-left: 10px;
+    transition: all 0.3s;
+    color: rgb(255, 255, 255);
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.3);
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.banner-button:hover {
+    filter: brightness(1.2);
+}
+
+#editor {
+    font-size: 24px; /* Yazı boyutunu ayarlayın */
+}
+
+.levels .btn {
+    font-size: 1.2rem;
+    border-radius: 10px;
+    margin-left: 5px;
+    transition: all 0.3s;
+    background-color: white;
+    color: rgb(47, 42, 42);
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.contentwrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.main-container {
+    display: flex;
+    flex-grow: 1;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.code-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #e0e0e0;
+}
+
+
+.CodeMirror {
+    height: calc(100vh - 250px) !important;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    flex-grow: 1;
+}
+
+
+.visual-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 15px;
+    height: auto;
+}
+
+
+.lower-section {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.action-button {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    margin: 10px;
+    transition: all 0.3s;
+    color: white;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.3);
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.action-button:hover {
+    filter: brightness(1.2);
+}
+
+
+.keypad {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+}
+
+.keypad button {
+    width: auto;
+    height: 50px;
+    margin: 5px;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #FB4141, #FB4141);
+    border: none;
+    border-radius: 30px;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.keypad button:hover {
+    background: linear-gradient(135deg, #e25151, #e25151);
+}
+
+.keypad button:active {
+    transform: scale(0.9);
+    box-shadow: none;
+}
+
+.numbers-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
